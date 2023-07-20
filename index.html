@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachel Landing Page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+</head>
+<body >
+    <nav>   
+        <div class="container"> 
+
+        
+        <input type="checkbox" id="shownav">
+        <label for="shownav" id="togglenav"><i class="fas fa-bars"></i></label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our Service</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <h1>RICHIWIN</h1>
+    <h3>Clothing Shop</h3>
+    <input type="search" placeholder="search...">
+    <p>
+        Richiwin's mens clothing shop Agbor is a unique place for quality wears and accessories,we give the best look you deserve. Imagine life without Richiwin.
+    </p>
+
+    <a href="#">sign in</a>
+    <a href="#">learn more...</a>
+    </div>
+    </section>
+    <script>
+        // JavaScript code to handle the navigation toggle
+        const toggleNavCheckbox = document.getElementById('shownav');
+        const toggleNavButton = document.getElementById('togglenav');
+        const navLinks = document.querySelector('nav ul');
+
+        toggleNavButton.addEventListener('click', () => {
+            if (toggleNavCheckbox.checked) {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'block';
+            }
+        });
+
+        // JavaScript code to handle closing the navigation menu when a link is clicked
+        const navItems = document.querySelectorAll('nav ul li');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.style.display = 'none';
+                toggleNavCheckbox.checked = false;
+            });
+        });
+    </script>
+    <!-- <img src="assets/richiwin.jpeg" alt=""> -->
+</body>
+</html>
